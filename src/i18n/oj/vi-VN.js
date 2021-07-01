@@ -198,7 +198,7 @@ export const m = {
   Reset: 'Reset',
   Pick_One: 'ជ្រើសរើសចៃដន្យ',
   Difficulty: 'កម្រិតលំបាក',
-  Total: 'Total',
+  Total: 'សរុបអ្នកចូលរួម',
   AC_Rate: 'AC Rate',
   // Register.vue
   RegisterUsername: 'Username',
@@ -251,5 +251,5 @@ export const m = {
   Pending: 'Pending',
   Partial_Accepted: 'Partial Accepted',
   Compile_Error: 'Compile Error',
-  Rejudge: 'វិនិច្ឆ័យម្តងទៀត',
+  Rejudge: 'វិនិច្ឆ័យម្តងទៀត'
 }

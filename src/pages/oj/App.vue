@@ -8,8 +8,8 @@
       </transition>
       <div class="footer">
         <p v-html="website.website_footer"></p>
-        <p>Modified by <a href="https://www.zklcdc.top/">Harry-zklcdc</a></p>
-        <p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>&nbsp; <span v-if="version">Version: {{ version }}</span></p>
+        <p>Make with ❤️ by <a href="https://fb.com/yan.samreach">Yan Samreach</a></p>
+        <p>Copyright &copy; 2021 <a href="http://sakcode.io">Sak Code Online</a>&nbsp; Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a></p>
       </div>
     </div>
 	<BackTop></BackTop>
@@ -98,7 +98,7 @@
   .fadeInUp-enter-active {
     animation: fadeInUp .8s;
   }
-  
+
   .CodeMirror-gutters {
     z-index: 1;
   }

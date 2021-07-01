@@ -1,23 +1,21 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 // ivew UI
+// មិនមាន view design ​library ជាភាសាខ្មែរ
 import ivenUS from 'view-design/dist/locale/en-US'
-import ivenKH from 'view-design/dist/locale/kh-KH'
-// import ivzhCN from 'view-design/dist/locale/zh-CN'
-// import ivzhTW from 'view-design/dist/locale/zh-TW'
+// import ivenKH from 'view-design/dist/locale/km-KH'
+import ivenVN from 'iview/dist/locale/vi-VN'
 // element UI
 import elenUS from 'element-ui/lib/locale/lang/en'
-import elenKH from 'element-ui/lib/locale/lang/kh'
-// import elzhCN from 'element-ui/lib/locale/lang/zh-CN'
-// import elzhTW from 'element-ui/lib/locale/lang/zh-TW'
+// import elenKM from 'element-ui/lib/locale/lang/km'
+import elenVN from 'element-ui/lib/locale/lang/vi'
 
 Vue.use(VueI18n)
 
 const languages = [
   {value: 'en-US', label: 'English', iv: ivenUS, el: elenUS},
-  {value: 'kh-KH', label: 'ភាសាខ្មែរ', iv: ivenKH, el: elenKH},
-  // {value: 'zh-CN', label: '简体中文', iv: ivzhCN, el: elzhCN},
-  // {value: 'zh-TW', label: '繁體中文', iv: ivzhTW, el: elzhTW}
+  // {value: 'km-KH', label: 'ភាសាខ្មែរ', iv: ivenKH, el: elenKM}
+  {value: 'vi-VN', label: 'ភាសាខ្មែរ', iv: ivenVN, el: elenVN}
 ]
 const messages = {}
 
@@ -31,7 +29,7 @@ for (let lang of languages) {
 }
 // load language packages
 export default new VueI18n({
-  locale: 'kh-KH',
+  locale: 'vi-VN',
   messages: messages
 })
 
