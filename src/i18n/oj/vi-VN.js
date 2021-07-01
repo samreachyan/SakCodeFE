@@ -79,6 +79,7 @@ export const m = {
 
   // ContestDetail.vue
   Problems: 'លំហាត់',
+  Details: 'លំអិត',
   Announcements: 'ដំណឹងថ្មីៗ',
   Submissions: 'ប្រតិបាទន៍',
   Problem_Submissions: 'ពិនិត្យលំហាត់',
@@ -193,12 +194,12 @@ export const m = {
   Problem_List: 'បញ្ជីលំហាត់',
   High: 'ពិបាក',
   Mid: 'មធ្យម',
-  Low: 'ទាប',
+  Low: 'ស្រួល',
   All: 'ទាំងអស់',
-  Reset: 'Reset',
+  Reset: 'ទាញយកម្តងទៀត',
   Pick_One: 'ជ្រើសរើសចៃដន្យ',
   Difficulty: 'កម្រិតលំបាក',
-  Total: 'សរុបអ្នកចូលរួម',
+  Total: 'សរុបចំនួន',
   AC_Rate: 'AC Rate',
   // Register.vue
   RegisterUsername: 'Username',
@@ -218,7 +219,7 @@ export const m = {
   Your_password_has_been_reset: 'លេខសម្ងាត់របស់អ្នកបានប្តូរជោគជ័យ',
   // UserHome.vue
   UserHomeSolved: 'បានធ្វើរូចរាល់',
-  UserHomeserSubmissions: 'មើលប្រតិបាទន៍',
+  UserHomeserSubmissions: 'ប្រតិបាទន៍សរុប',
   UserHomeScore: 'ពិន្ទុ',
   List_Solved_Problems: 'បញ្ជីលំហាត់ដែលបានដោះស្រាយ',
   UserHomeIntro: 'អ្នកមិនទាន់បានដោះស្រាយលំហាត់ណាមួយនៅឡើយ!',
@@ -239,7 +240,7 @@ export const m = {
   ID: 'ID',
   Time: 'ពេលវេលា',
   Memory: 'អង្គចងចាំ',
-  Author: 'អ្នករៀបរៀង',
+  Author: 'ឈ្មោះគណនី',
   Option: 'ជម្រើស',
   Mine: 'Mine',
   Search_Author: 'ស្វែងរកអ្នករៀបរៀង',
