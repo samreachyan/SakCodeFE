@@ -242,7 +242,7 @@ export const m = {
   Memory: 'អង្គចងចាំ',
   Author: 'ឈ្មោះគណនី',
   Option: 'ជម្រើស',
-  Mine: 'Mine',
+  Mine: 'របស់ខ្ញុំ',
   Search_Author: 'ស្វែងរកអ្នករៀបរៀង',
   Accepted: 'Accepted',
   Time_Limit_Exceeded: 'Time Limit Exceeded',

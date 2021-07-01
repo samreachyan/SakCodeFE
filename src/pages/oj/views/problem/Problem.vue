@@ -3,7 +3,7 @@
     <div id="problem-main">
       <!--problem main-->
       <Panel :padding="40" shadow>
-        <div slot="title">{{problem.title}}</div>
+        <div style="text-align:center; color:#3091f2;" slot="title">{{problem.title}}</div>
         <div id="problem-content" class="markdown-body" v-katex>
           <p class="title">{{$t('m.Description')}}</p>
           <p class="content" v-html=problem.description></p>
@@ -18,7 +18,7 @@
             <div class="flex-container sample">
               <div class="sample-input">
                 <p class="title">{{$t('m.Sample_Input')}} {{index + 1}}
-                  <a class="copy"
+                  <a style="color:#636e72;" class="copy"
                      v-clipboard:copy="sample.input"
                      v-clipboard:success="onCopy"
                      v-clipboard:error="onCopyError">
@@ -528,10 +528,10 @@
   #problem-content {
     margin-top: -50px;
     .title {
-      font-size: 20px;
-      font-weight: 400;
+      font-size: 18px;
+      font-weight: bold;
       margin: 25px 0 8px 0;
-      color: #3091f2;
+      color: #636e72;
       .copy {
         padding-left: 8px;
       }
