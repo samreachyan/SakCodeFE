@@ -1,26 +1,21 @@
 <template>
   <div>
     <Panel v-if="!isContest" shadow style="float:right; margin-right:0%; width:23%; hight:200px">
-      <div style="margin:0 10%; font-size:14px; text-align:left; width:100%; line-height:16px; background: transparent; color:#636e72;">今天是：</div>
+      <div style="margin:0 0; font-size:17px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">ចេះពីរៀន មានពីរក</div>
+      <div style="margin-top: 10px; font-size:17px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">ថ្ងៃ {{ nowWeek }}</div>
       <Layout>
-        <Sider style="width:25%; min-width:25%; max-width:25%; flex: 0 0 25%; background: transparent;">
-          <div style="margin:50% 65%; font-size:18px; text-align:center; width:26px; line-height:28px; background: transparent; color:#636e72;">{{nowMouth}}月</div>
-        </Sider>
         <Content style="background: transparent;">
           <div style="margin:0 auto; font-size:120px; text-align:center; background: transparent; color:rgb(73, 80, 96);">
            <strong>{{nowDate}}</strong>
           </div>
         </Content>
-        <Sider style="width:25%; min-width:25%; max-width:25%; flex: 0 0 25%; background: transparent;">
-          <div style="margin:50% 15%; font-size:18px; text-align:center; width:26px; line-height:28px; background: transparent; color:#636e72;">{{nowWeek}}</div>
-        </Sider>
       </Layout>
-      <div v-if="days" style="margin:0 auto; margin-top:-30px; margin-bottom:15px; font-size:12px; text-align:center; width:160px; line-height:16px; background: transparent; color:#636e72;">您已在「{{website.website_name}}」<br>连续签到了 <strong>{{days}}</strong> 天</div>
-      <div style="margin-top:-10px; margin:0 auto; font-size:14px; text-align:center; width:80%; line-height:16px; background: transparent; color:#636e72;">{{word}}</div>
-      <Button v-if="!SighinStatus" type="primary" icon="ios-alarm" @click="Sighin" long style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">签到</Button>
+      <div style="margin:0 0; font-size:17px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">ខែ {{ nowMonth }}​ ឆ្នាំ​ {{ nowYear }}</div>
+      <Button v-if="!SighinStatus" type="primary" icon="ios-alarm" @click="Sighin" long style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">យកពិន្ទុវត្តមាន</Button>
       <Button v-else type="primary" icon="ios-alarm" long disabled style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">
-          签到
+          ទទូលបាន ១ពិន្ទុ
       </Button>
+
     </Panel>
 
     <Panel shadow :padding="10" :style="AnnouncementStyle" >
@@ -144,10 +139,10 @@
       },
       setNowTimes () {
         let myDate = new Date()
-        let weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
-        let mouth = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二']
+        let weeks = ['អាទិត្យ', 'ច័ន្ទ', 'អង្គារ', 'ព្រហស្បត្តិ៍', 'សុក្រ', 'សៅរ៍']
+        let mouth = ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆកា', 'ធ្នូ']
         this.nowDate = String(myDate.getDate() < 10 ? '0' + myDate.getDate() : myDate.getDate())
-        this.nowMouth = mouth[myDate.getMonth()]
+        this.nowMonth = mouth[myDate.getMonth()]
         this.nowWeek = weeks[myDate.getDay()]
         this.nowYear = myDate.getFullYear()
       },
