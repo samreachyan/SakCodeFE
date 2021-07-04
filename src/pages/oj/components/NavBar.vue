@@ -34,10 +34,6 @@
           {{$t('m.Experience_Ranklist')}}
         </Menu-item>
       </Submenu>
-      <Menu-item name="/IDE">
-        <Icon type="ios-cloud"></Icon>
-        {{$t('m.IDE')}}
-      </Menu-item>
       <Submenu name="about">
         <template slot="title">
           <Icon type="md-information-circle"></Icon>
