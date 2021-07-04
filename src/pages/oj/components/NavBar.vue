@@ -34,18 +34,10 @@
           {{$t('m.Experience_Ranklist')}}
         </Menu-item>
       </Submenu>
-      <Submenu name="onlineapp">
-        <template slot="title">
-          <Icon type="ios-cloud" />
-          {{$t('m.App')}}
-        </template>
-        <Menu-item name="/IDE">
-          {{$t('m.IDE')}}
-        </Menu-item>
-        <Menu-item v-if="website.allow_forum_post" name="/Forum">
-          {{$t('m.Forum')}}
-        </Menu-item>
-      </Submenu>
+      <Menu-item name="/IDE">
+        <Icon type="ios-cloud"></Icon>
+        {{$t('m.IDE')}}
+      </Menu-item>
       <Submenu name="about">
         <template slot="title">
           <Icon type="md-information-circle"></Icon>
