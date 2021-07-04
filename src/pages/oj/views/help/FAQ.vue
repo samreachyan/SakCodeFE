@@ -38,7 +38,7 @@
           <p>{{$t('m.Java_specifications_answer_part_1')}} <code>Main</code> {{$t('m.Java_specifications_answer_part_2')}} <code>Main</code> {{$t('m.Java_specifications_answer_part_3')}}</p>
         </li>
         <li> រាល់ចម្ងល់ ឬ មតិដើម្បីអភិវឌ្ឍន៍បន្ថែមអ្នកអាចចូលរួមបាន៖
-          <p>ប្រសិនបើកំឡុងពេល តេស្តសាកល្បងសមត្ថភាព មានបញ្ហាផ្សេងៗ ឬអ្នកមានមតិអ្វីអាចចូលរួមបន្ថែមនៅក្នុង Facebook Group : <a href="https://www.facebook.com/groups/sak-code" >សាកកូដ - Sak Code Communities</a></p>
+          <p>ប្រសិនបើកំឡុងពេល តេស្តសាកល្បងសមត្ថភាព មានបញ្ហាផ្សេងៗ ឬអ្នកមានមតិអ្វីអាចចូលរួមបន្ថែមនៅក្នុង Facebook Group : <a href="https://fb.me/groups/sakcode" >សាកកូដ - Sak Code Communities</a></p>
         </li>
       </ul>
     </div>
