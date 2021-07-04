@@ -131,37 +131,37 @@ export const GOOGLE_ANALYTICS_ID = 'UA-111499601-1'
 
 export const USER_GRADE = {
   '0': {
-    name: '小白兔',
+    name: 'Newbie',
     short: '0',
     color: '#636e72'
   },
   '1': {
-    name: '菜鸟',
+    name: 'Pupil',
     short: '1',
     color: 'primary'
   },
   '2': {
-    name: '键盘虾',
+    name: 'Specialist',
     short: '2',
     color: '#6c5ce7'
   },
   '3': {
-    name: '马农',
+    name: 'Expert',
     short: '3',
     color: '#1dd1a1'
   },
   '4': {
-    name: '牛人',
+    name: 'Candidate Master',
     short: '4',
     color: '#ff9f43'
   },
   '5': {
-    name: '程序猿',
+    name: 'Master',
     short: '5',
     color: '#ee5253'
   },
   '6': {
-    name: '攻城狮',
+    name: 'Grandmaster',
     short: '6',
     color: '#222f3e'
   }

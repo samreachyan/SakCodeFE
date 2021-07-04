@@ -252,5 +252,7 @@ export const m = {
   Pending: 'Pending',
   Partial_Accepted: 'Partial Accepted',
   Compile_Error: 'Compile Error',
-  Rejudge: 'វិនិច្ឆ័យម្តងទៀត'
+  Rejudge: 'វិនិច្ឆ័យម្តងទៀត',
+  Cancel: 'បដិសេធ',
+  Delete: 'លុបចោល'
 }
