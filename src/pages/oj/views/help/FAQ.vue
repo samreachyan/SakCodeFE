@@ -37,14 +37,6 @@
         <li>{{$t('m.Java_specifications')}}
           <p>{{$t('m.Java_specifications_answer_part_1')}} <code>Main</code> {{$t('m.Java_specifications_answer_part_2')}} <code>Main</code> {{$t('m.Java_specifications_answer_part_3')}}</p>
         </li>
-        <li>{{$t('m.About_presentation_error')}}
-          <p>{{$t('m.About_presentation_error_answer_part_1')}} <b>{{$t('m.last')}}</b> {{$t('m.About_presentation_error_answer_part_2')}} <code> {{$t('m.Wrong_Answer')}}</code>.</p>
-        </li>
-        <li>{{$t('m.How_to_report_bugs')}}
-          <p>{{$t('m.How_to_report_bugs_answer_part_1')}} <a href="https://github.com/samreachyan/OnlineJudge">Github</a>
-            {{$t('m.How_to_report_bugs_answer_part_2')}}
-          </p>
-        </li>
         <li> រាល់ចម្ងល់ ឬ មតិដើម្បីអភិវឌ្ឍន៍បន្ថែមអ្នកអាចចូលរួមបាន៖
           <p>ប្រសិនបើកំឡុងពេល តេស្តសាកល្បងសមត្ថភាព មានបញ្ហាផ្សេងៗ ឬអ្នកមានមតិអ្វីអាចចូលរួមបន្ថែមនៅក្នុង Facebook Group : <a href="https://www.facebook.com/groups/sak-code" >សាកកូដ - Sak Code Communities</a></p>
         </li>

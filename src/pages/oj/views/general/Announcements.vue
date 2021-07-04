@@ -160,14 +160,14 @@
         api.UserSighin().then(res => {
           if (res.data.data === 'Singined') {
             this.$Notice.error({
-              title: '签到失败',
-              desc: '稳健佬，您已经签过到了呀 ~ 明天再来哦'
+              title: 'បរាជ័យ',
+              desc: 'អ្នកបានយកពិន្ទុវត្តមានម្តងហើយ 🤪 សូមមេតា្តថ្ងៃស្អែកចូលយកវត្តមានម្តងទៀត ❤️❤️'
             })
             this.isSighin()
           } else {
             this.$Notice.success({
-              title: '签到成功',
-              desc: '恭喜稳健佬，获得 ' + res.data.data.experience + ' 稳点，明天记得来签到哦'
+              title: 'ជោគជ័យ',
+              desc: 'លោកអ្នកបានទទួល ១ពិន្ទុសម្រាប់មេគុណពិន្ទុបទពិសោធន៍ ' + res.data.data.experience + ' សូមមេត្តាថ្ងៃស្អែកចូលយកវត្តមានម្តងទៀត ❤️❤️'
             })
             this.days += 1
             this.SighinStatus = true

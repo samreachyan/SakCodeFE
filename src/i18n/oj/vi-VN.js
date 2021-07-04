@@ -194,7 +194,7 @@ export const m = {
   Problem_List: 'បញ្ជីលំហាត់',
   High: 'ពិបាក',
   Mid: 'មធ្យម',
-  Low: 'ស្រួល',
+  Low: 'ងាយ',
   All: 'ទាំងអស់',
   Reset: 'ទាញយកម្តងទៀត',
   Pick_One: 'ជ្រើសរើសចៃដន្យ',
@@ -252,7 +252,7 @@ export const m = {
   Pending: 'Pending',
   Partial_Accepted: 'Partial Accepted',
   Compile_Error: 'Compile Error',
-  Rejudge: 'វិនិច្ឆ័យម្តងទៀត',
+  Rejudge: 'Rejudge',
   Cancel: 'បដិសេធ',
   Delete: 'លុបចោល'
 }

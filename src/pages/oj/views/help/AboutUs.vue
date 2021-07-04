@@ -2,8 +2,7 @@
   <panel>
     <div slot="title">{{$t('m.AboutUs')}}</div>
     <div v-katex v-html="aboutus.content" class="content markdown-body"></div>
-	<p></p>
-    <div class="content markdown-body update_time"><strong>last update time: </strong>{{aboutus.last_update_time | localtime }}</div>
+    <p​ class="content">សូមអរគុណ!</p​>
   </panel>
 </template>
 
@@ -53,7 +52,7 @@
       }
     }
   }
-  
+
   .update_time{
     text-align:right;
   }

@@ -103,7 +103,7 @@ export const m = {
   Add_Problme: 'Add Problem',
   High: 'ពិបាក',
   Mid: 'មធ្យម',
-  Low: 'ស្រួល',
+  Low: 'ងាយ',
   Tag: 'Tag',
   New_Tag: 'New Tag',
   // ProblemList.vue
