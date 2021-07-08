@@ -9,13 +9,25 @@
           <span v-if="profile.user" class="emphasis">
             <Tag v-if="profile.user.title" :color="profile.user.title_color">{{ profile.user.title }}</Tag>
             <Tag v-else :color="color">{{ gradename }}</Tag>
-            {{profile.user.username}}
+            <span v-if="profile.real_name">{{profile.real_name}}</span>
+            <span v-if="profile.user.username" class="username">@{{profile.user.username}}</span>
           </span>
-          <span v-if="profile.school">@{{profile.school}}</span>
         </p>
+        <p v-if="profile.school" style="font-size: 1.2em;color: rgb(48 141 240);"><span style="border: 1px dotted rgb(229 233 236); padding: 5px;"><span v-if="profile.major">{{profile.major}} at </span> {{profile.school}}</span></p>
         <p v-if="profile.mood">
           {{profile.mood}}
         </p>
+         <div id="social-network">
+          <a :href="profile.github">
+            <Icon type="social-github-outline" size="30"></Icon>
+          </a>
+          <a :href="'mailto:'+ profile.user.email">
+            <Icon class="icon" type="ios-email-outline" size="30"></Icon>
+          </a>
+          <a :href="profile.blog">
+            <Icon class="icon" type="ios-world-outline" size="30"></Icon>
+          </a>
+        </div>
         <hr id="split"/>
 
         <div class="flex-container">
@@ -206,6 +218,17 @@
       .icon {
         padding-left: 20px;
       }
+    }
+    #social-network {
+      text-align: center;
+      .icon {
+        padding-left: 20px;
+      }
+    }
+    .username {
+      font-size: 18px;
+      color: #2d8cf0;
+      font-weight: 200;
     }
   }
 </style>
