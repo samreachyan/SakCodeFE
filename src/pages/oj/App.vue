@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-	<vue-canvas-nest :config="{color:'0,117,169', count: 200, opacity: 0.7, pointColor: '0,0,0', zIndex: -2}" :el="'.content-app'"></vue-canvas-nest>
+	<!-- <vue-canvas-nest :config="{color:'255,0,0', count: 100, opacity: 0.7, pointColor: '26,110,200', zIndex: -2}" :el="'.content-app'"></vue-canvas-nest> -->
     <div class="content-app theme1">
       <transition name="fadeInUp" mode="out-in">
         <router-view></router-view>
@@ -161,6 +161,7 @@
 
   .theme1{  //胖次蓝
     .theme();
+    // .theme(#f58f98, #f58f98, #d93a49, rgba(245, 143, 152, 0.35));
   }
 
   .theme2{  //少女粉

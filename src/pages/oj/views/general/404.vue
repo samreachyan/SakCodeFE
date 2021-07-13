@@ -3,7 +3,7 @@
     <div class="error404-body-con">
       <Card>
         <div class="error404-body-con-title">4<span><Icon type="ios-navigate-outline"></Icon></span>4</div>
-        <p class="error404-body-con-message">YOU&nbsp;&nbsp;LOOK&nbsp;&nbsp;LOST</p>
+        <p class="error404-body-con-message">រកមិនមានទេ! ព្យាយាមម្តងទៀត</p>
         <div class="error404-btn-con">
           <Button @click="goHome" size="large" style="width: 200px;" type="ghost">{{$t('m.Go_Home')}}</Button>
           <Button @click="backPage" size="large" style="width: 200px;margin-left: 40px;" type="primary">{{$t('m.Back')}}</Button>
@@ -74,10 +74,9 @@
       &-message {
         display: block;
         text-align: center;
-        font-size: 30px;
-        font-weight: 500;
-        letter-spacing: 12px;
-        color: #dddde2;
+        font-size: 40px;
+        font-weight: 400;
+        color: #2d8cf0;
       }
     }
     &-btn-con {

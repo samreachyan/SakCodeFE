@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" :class="oj-menu">
-      <div class="logo" title="Sak Code"><a href="/"><img src="../../../assets/home.png" height="60px" width="100%" alt="Sak Code ជាកម្មវិធីហ្វឹកហាត់កូដ តេស្តសមត្ថភាពជាភាសាខ្មែរ"/></a></div>
+      <div class="logo" title="Sak Code"><a href="/"><img src="../../../assets/home.png" height="60px" alt="Sak Code ជាកម្មវិធីហ្វឹកហាត់កូដ តេស្តសមត្ថភាពជាភាសាខ្មែរ"/></a></div>
       <Menu-item name="/problem">
         <Icon type="ios-keypad"></Icon>
         {{$t('m.NavProblems')}}
