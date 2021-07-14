@@ -100,16 +100,11 @@
                 ])
               } else {
                 return h('div', [
-                  h('Tag', {
-                    props: {
-                      color: USER_GRADE[params.row.grade].color
-                    }
-                  }, USER_GRADE[params.row.grade].name),
                   h('a', {
                     style: {
                       'display': 'inline-block',
                       'max-width': '150px',
-                      'margin-left': '5px'
+                      'margin-left': '2px'
                     },
                     on: {
                       click: () => {

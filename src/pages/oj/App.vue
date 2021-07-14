@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-	<!-- <vue-canvas-nest :config="{color:'255,0,0', count: 100, opacity: 0.7, pointColor: '26,110,200', zIndex: -2}" :el="'.content-app'"></vue-canvas-nest> -->
+	<vue-canvas-nest :config="{color:'255,0,0', count: 50, opacity: 0.7, pointColor: '26,110,200', zIndex: -2}" :el="'.content-app'"></vue-canvas-nest>
     <div class="content-app theme1">
       <transition name="fadeInUp" mode="out-in">
         <router-view></router-view>
@@ -9,7 +9,7 @@
       <div class="footer">
         <!-- <p v-html="website.website_footer"></p> -->
         <p>Modified with ❤️ by <a href="https://github.com/samreachyan">Yan Samreach</a></p>
-        <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="https://sakcode.io">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a></p>
+        <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="https://sakcode.net">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a></p>
       </div>
     </div>
 	<BackTop></BackTop>
@@ -161,7 +161,7 @@
 
   .theme1{  //胖次蓝
     .theme();
-    // .theme(#f58f98, #f58f98, #d93a49, rgba(245, 143, 152, 0.35));
+    // .theme (#3276fb, #7b3ab7, #673AB7, rgba(103, 58, 183, 0.25));
   }
 
   .theme2{  //少女粉
