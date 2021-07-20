@@ -23,7 +23,7 @@ export default {
         return
       }
       tableColumns.splice(0, 0, {
-        width: 60,
+        width: 30,
         title: ' ',
         render: (h, params) => {
           let status = params.row.my_status
@@ -32,7 +32,7 @@ export default {
           }
           return h('Icon', {
             props: {
-              type: status === 0 ? 'checkmark-round' : 'minus-round',
+              type: status === 0 ? 'md-checkmark-circle' : 'md-remove',
               size: '16'
             },
             style: {

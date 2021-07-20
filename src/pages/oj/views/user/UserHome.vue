@@ -19,17 +19,16 @@
         </p>
          <div id="social-network">
           <a :href="profile.github">
-            <Icon type="social-github-outline" size="30"></Icon>
+            <Icon type="logo-github" size="30" />
           </a>
           <a :href="'mailto:'+ profile.user.email">
-            <Icon class="icon" type="ios-email-outline" size="30"></Icon>
+            <Icon class="icon" type="ios-mail-open-outline" size="30" />
           </a>
           <a :href="profile.blog">
-            <Icon class="icon" type="ios-world-outline" size="30"></Icon>
+            <Icon class="icon" type="ios-ionic-outline" size="30" />
           </a>
         </div>
         <hr id="split"/>
-
         <div class="flex-container">
           <div class="left">
             <p>{{$t('m.UserHomeSolved')}}</p>
@@ -63,13 +62,13 @@
         </div>
         <div id="icons">
           <a :href="profile.github">
-            <Icon type="social-github-outline" size="30"></Icon>
+            <Icon class="icon" type="logo-github" size="30"></Icon>
           </a>
           <a :href="'mailto:'+ profile.user.email">
-            <Icon class="icon" type="ios-email-outline" size="30"></Icon>
+            <Icon class="icon" type="ios-mail-open-outline" size="30" />
           </a>
           <a :href="profile.blog">
-            <Icon class="icon" type="ios-world-outline" size="30"></Icon>
+            <Icon class="icon" type="ios-ionic-outline" size="30" />
           </a>
         </div>
       </div>
@@ -211,18 +210,21 @@
       }
     }
     #icons {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translate(-50%);
-      .icon {
-        padding-left: 20px;
+      padding: 10px 20px;
+      a {
+        padding: 0 10px;
+        i:hover {
+          color: red;
+        }
       }
     }
     #social-network {
       text-align: center;
       .icon {
         padding-left: 20px;
+      }
+      i:hover {
+        color: red;
       }
     }
     .username {

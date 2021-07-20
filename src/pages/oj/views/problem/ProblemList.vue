@@ -93,6 +93,7 @@
           {
             title: 'ID',
             key: '_id',
+            align: 'center',
             width: 98,
             render: (h, params) => {
               return h('a', {
