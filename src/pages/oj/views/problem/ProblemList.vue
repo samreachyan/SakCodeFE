@@ -96,43 +96,41 @@
             align: 'center',
             width: 98,
             render: (h, params) => {
-              return h('a', {
+              return h('Button', {
                 props: {
                   type: 'text',
                   size: 'large'
                 },
-                attrs: {
-                  href: '/problem/' + params.row._id
+                on: {
+                  click: () => {
+                    this.$router.push({name: 'problem-details', params: {problemID: params.row._id}})
+                  }
                 },
                 style: {
-                  'padding': '2px 0px',
-                  fontSize: '14px',
-                  color: '#495060'
+                  padding: '2px 0'
                 }
               }, params.row._id)
             }
           },
           {
             title: this.$i18n.t('m.Title'),
-            width: 400,
+            width: 360,
             render: (h, params) => {
-              return h('a', {
+              return h('Button', {
                 props: {
                   type: 'text',
                   size: 'large'
                 },
-                attrs: {
-                  href: '/problem/' + params.row._id
+                on: {
+                  click: () => {
+                    this.$router.push({name: 'problem-details', params: {problemID: params.row._id}})
+                  }
                 },
                 style: {
                   padding: '2px 0',
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                  textOverflow: 'ellipsis',
+                  overflowX: 'auto',
                   textAlign: 'left',
-                  width: '95%',
-                  fontSize: '14px',
-                  color: '#495060'
+                  width: '100%'
                 }
               }, params.row.title)
             }
@@ -271,7 +269,7 @@
                 })
                 return h('div', {
                   style: {
-                    margin: '8px 0'
+                    margin: '5px 0'
                   }
                 }, tags)
               }
