@@ -22,6 +22,7 @@ export const m = {
   Submitting: 'Submitting',
   Judging: 'Judging',
   Wrong_Answer: 'Wrong Answer',
+  Newest_Problems: '💥 The Newest Problems 💥',
   Statistic: 'Statistic',
   Close: 'Close',
   View_Contest: 'View Contest',

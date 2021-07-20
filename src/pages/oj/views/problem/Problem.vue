@@ -186,6 +186,48 @@
           <ECharts :options="pie"></ECharts>
         </div>
       </Card>
+
+      <!-- Display newest Problems -->
+      <!-- <Card id="newest-problems" v-if="!this.contestID || OIContestRealTimePermission">
+        <div slot="title">
+          <Icon type="ios-analytics"></Icon>
+          <span class="card-title">{{$t('m.Newest_Problems')}}</span>
+        </div>
+        <div class="newest-problems">
+          <div class="newest-problems-title">
+            <Icon type="ios-analytics"></Icon>
+            <span class="newest-problems-title-text">{{$t('m.Newest_Problems')}}</span>
+          </div>
+          <div class="newest-problems-content">
+            <template v-for="problem in problems">
+              <div class="newest-problems-problem">
+                <div class="newest-problems-problem-title">
+                  <a :href="'/problem/'+p._id" :key="p.id">
+                    <Icon type="ios-pricetag-outline"></Icon>
+                    <span>{{problem.title}}</span>
+                  </a>
+                </div>
+                <div class="newest-problems-problem-info">
+                  <span>{{problem.time_limit}}MS</span>
+                  <span>{{problem.memory_limit}}MB</span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </Card> -->
+      <Card style="margin-top: 20px;" :padding="0" v-if="!this.contestID || OIContestRealTimePermission">
+        <div slot="title" style="font-size: 16px"><i data-v-20c86fbe="" class="ivu-icon ivu-icon-android-document"></i>
+        <span class="card-title">{{ $t('m.Newest_Problems') }}</span>
+        </div>
+        <ul style="margin-left: 30px;margin-bottom: 20px;">
+          <li style="padding: 5px 0px;"  v-for="p in problemList" :key="p.id">
+            <a class="link-style" :href="'/problem/' + p._id">{{p._id}} - {{p.title}}</a>
+          </li>
+        </ul>
+      </Card>
+      <!-- end display newest Problems -->
+
     </div>
 
     <Modal v-model="graphVisible">
@@ -237,6 +279,8 @@
         result: {
           result: 9
         },
+        problemList: [],
+        problemLimit: 10,
         problem: {
           title: '',
           description: '',
@@ -274,6 +318,7 @@
     mounted () {
       this.$store.commit(types.CHANGE_CONTEST_ITEM_VISIBLE, {menu: false})
       this.init()
+      this.getProblemList()
     },
     methods: {
       ...mapActions(['changeDomTitle']),
@@ -305,6 +350,13 @@
           }
         }, () => {
           this.$Loading.error()
+        })
+      },
+      // get newest problems
+      getProblemList () {
+        let offset = 0
+        api.getProblemList(offset, this.problemLimit, this.query).then(res => {
+          this.getNewestProblems = res.data.data.results
         })
       },
       changePie (problemData) {

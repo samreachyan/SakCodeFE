@@ -23,6 +23,7 @@ export const m = {
   Submitting: 'កំពុងផ្ញើ...',
   Judging: 'កំពុងវិនិច្ឆ័យចម្លើយ',
   Wrong_Answer: 'Wrong Answer',
+  Newest_Problems: '💥 លំហាត់ថ្មីៗ 💥',
   Statistic: 'ទិន្នន័យ',
   Close: 'បិទ',
   View_Contest: 'មើលការប្រកួតប្រជែង',
