@@ -41,6 +41,7 @@
       </div>
       <Table style="width: 100%; font-size: 16px;"
              :columns="problemTableColumns"
+             @on-sort-change="handleSortChange"
              :data="problemList"
              :loading="loadings.table"
              disabled-hover></Table>
@@ -90,22 +91,22 @@
         tagList: [],
         problemTableColumns: [
           {
-            title: '#',
+            title: 'ID',
             key: '_id',
             width: 98,
             render: (h, params) => {
-              return h('Button', {
+              return h('a', {
                 props: {
                   type: 'text',
                   size: 'large'
                 },
-                on: {
-                  click: () => {
-                    this.$router.push({name: 'problem-details', params: {problemID: params.row._id}})
-                  }
+                attrs: {
+                  href: '/problem/' + params.row._id
                 },
                 style: {
-                  padding: '2px 0'
+                  'padding': '2px 0px',
+                  fontSize: '14px',
+                  color: '#495060'
                 }
               }, params.row._id)
             }
@@ -114,21 +115,23 @@
             title: this.$i18n.t('m.Title'),
             width: 400,
             render: (h, params) => {
-              return h('Button', {
+              return h('a', {
                 props: {
                   type: 'text',
                   size: 'large'
                 },
-                on: {
-                  click: () => {
-                    this.$router.push({name: 'problem-details', params: {problemID: params.row._id}})
-                  }
+                attrs: {
+                  href: '/problem/' + params.row._id
                 },
                 style: {
                   padding: '2px 0',
-                  overflowX: 'auto',
+                  overflow: 'hidden',
+                  whiteSpace: 'nowrap',
+                  textOverflow: 'ellipsis',
                   textAlign: 'left',
-                  width: '100%'
+                  width: '95%',
+                  fontSize: '14px',
+                  color: '#495060'
                 }
               }, params.row.title)
             }
@@ -148,18 +151,20 @@
             }
           },
           {
+            sortable: true,
             title: this.$i18n.t('m.Total'),
             key: 'submission_number'
           },
           {
-            title: this.$i18n.t('m.AC_Rate'),
+            sortable: true,
+            title: this.$i18n.t('m.AC_Count'),
             render: (h, params) => {
-              return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
+              return h('span', params.row.accepted_number)
             }
           }
         ],
         problemList: [],
-        limit: 20,
+        limit: 15,
         total: 0,
         loadings: {
           table: true,
@@ -206,6 +211,9 @@
           this.loadings.table = false
           this.total = res.data.data.total
           this.problemList = res.data.data.results
+          for (let i = 0; i < this.problemList.length; i++) {
+            this.problemList[i].ac_rate = this.problemList[i].submission_number === 0 ? 0.00 : (this.problemList[i].accepted_number / this.problemList[i].submission_number * 100)
+          }
           if (this.isAuthenticated) {
             this.addStatusColumn(this.problemTableColumns, res.data.data.results)
           }
@@ -223,18 +231,30 @@
           this.loadings.tag = false
         })
       },
+      handleSortChange (data) {
+        let key = data['key']
+        if (data['order'] === 'desc') {
+          key = '-' + key
+        }
+        if (data['order'] !== 'normal') {
+          this.query.orderby = key
+        } else {
+          this.query.orderby = null
+        }
+        this.pushRouter()
+      },
       filterByTag (tagName) {
         this.query.tag = tagName
-        this.query.page = 1
+        this.query.page = null
         this.pushRouter()
       },
       filterByDifficulty (difficulty) {
         this.query.difficulty = difficulty
-        this.query.page = 1
+        this.query.page = null
         this.pushRouter()
       },
       filterByKeyword () {
-        this.query.page = 1
+        this.query.page = null
         this.pushRouter()
       },
       handleTagsVisible (value) {

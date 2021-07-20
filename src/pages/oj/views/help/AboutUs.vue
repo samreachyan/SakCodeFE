@@ -3,7 +3,7 @@
     <div slot="title">{{$t('m.AboutUs')}}</div>
     <div v-katex v-html="aboutus.content" class="content markdown-body"></div>
     <div class="content markdown-body update_time"></div>
-    <div class="content">
+    <!-- <div class="content">
       <h3>ក្រុមការងារស្ម័គ្រចិត្ត</h3>
       <div class="flex-container">
         <div class="card">
@@ -27,7 +27,7 @@
           <p>Technical Supporter</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </panel>
 </template>
 

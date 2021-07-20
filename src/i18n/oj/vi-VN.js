@@ -201,6 +201,7 @@ export const m = {
   Difficulty: 'កម្រិតលំបាក',
   Total: 'សរុបចំនួន',
   AC_Rate: 'AC Rate',
+  AC_Count: 'ចំនួនធ្វើត្រូវ',
   // Register.vue
   RegisterUsername: 'Username',
   Email_Address: 'E-mail',

@@ -55,7 +55,7 @@
            title="Upload the avatar">
       <div class="upload-modal">
         <p class="notice">Your avatar will be set to:</p>
-        <img :src="uploadImgSrc" width="300px"	background-position: center center/>
+        <img :src="uploadImgSrc" width="300px"	background-position="center" />
       </div>
       <div slot="footer">
         <Button @click="uploadAvatar" :loading="loadingUploadBtn">upload</Button>
@@ -66,7 +66,7 @@
     <Form ref="formProfile" :model="formProfile">
       <Row type="flex" :gutter="30" justify="space-around">
         <Col :span="11">
-          <FormItem label="Real Name">
+          <FormItem label="Full Name">
             <Input v-model="formProfile.real_name"/>
           </FormItem>
           <Form-item label="School">
@@ -86,10 +86,10 @@
         </Col>
 
         <Col :span="11">
-          <Form-item label="Mood">
+          <Form-item label="Bio-introduce">
             <Input v-model="formProfile.mood"/>
           </Form-item>
-          <Form-item label="Blog">
+          <Form-item label="Website">
             <Input v-model="formProfile.blog"/>
           </Form-item>
           <Form-item label="Github">

@@ -45,7 +45,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import api from '@oj/api'
-  import { JUDGE_STATUS, USER_TYPE, USER_GRADE } from '@/utils/constants'
+  import { JUDGE_STATUS, USER_TYPE } from '@/utils/constants'
   import utils from '@/utils/utils'
   import time from '@/utils/time'
   import Pagination from '@/pages/oj/components/Pagination'
@@ -66,6 +66,7 @@
           {
             title: this.$i18n.t('m.When'),
             align: 'center',
+            width: '115px',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.create_time))
             }
@@ -201,8 +202,8 @@
         ],
         loadingTable: false,
         submissions: [],
-        total: 30,
-        limit: 12,
+        total: 40,
+        limit: 20,
         page: 1,
         contestID: '',
         problemID: '',
