@@ -11,9 +11,10 @@
         </Content>
       </Layout>
       <div style="margin:0 0; font-size:17px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">ខែ {{ nowMonth }}​ ឆ្នាំ​ {{ nowYear }}</div>
-      <Button v-if="!SighinStatus" type="primary" icon="ios-alarm" @click="Sighin" long style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">យកពិន្ទុវត្តមាន</Button>
-      <Button v-else type="primary" icon="ios-alarm" long disabled style="margin-top:20px; margin-bottom:20px; margin-left:10%; width:80%;">
-          ទទូលបាន ១ពិន្ទុ
+      <div v-if="days" style="margin:10px 0 0 0; font-size:12px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">វត្តមានទៀតទាត់ថ្ងៃទី {{ days }}</div>
+      <Button v-if="!SighinStatus" type="primary" icon="ios-alarm" @click="Sighin" long style="margin-top:10px; margin-bottom:20px; margin-left:10%; width:80%;">យកពិន្ទុវត្តមាន</Button>
+      <Button v-else type="primary" icon="ios-alarm" long disabled style="margin-top:10px; margin-bottom:20px; margin-left:10%; width:80%;">
+          ទទួលបាន ១ពិន្ទុ
       </Button>
 
     </Panel>
@@ -139,9 +140,9 @@
       },
       setNowTimes () {
         let myDate = new Date()
-        let weeks = ['អាទិត្យ', 'ច័ន្ទ', 'អង្គារ', 'ព្រហស្បត្តិ៍', 'សុក្រ', 'សៅរ៍']
+        let weeks = ['អាទិត្យ', 'ច័ន្ទ', 'អង្គារ', 'ពុធ', 'ព្រហស្បតិ៍', 'សុក្រ', 'សៅរ៍']
         let mouth = ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆកា', 'ធ្នូ']
-        this.nowDate = String(myDate.getDate() < 10 ? '0' + myDate.getDate() : myDate.getDate())
+        this.nowDate = myDate.getDate()
         this.nowMonth = mouth[myDate.getMonth()]
         this.nowWeek = weeks[myDate.getDay()]
         this.nowYear = myDate.getFullYear()
@@ -167,7 +168,7 @@
           } else {
             this.$Notice.success({
               title: 'ជោគជ័យ',
-              desc: 'លោកអ្នកបានទទួល ១ ពិន្ទុសម្រាប់មេគុណពិន្ទុបទពិសោធន៍! សូមមេត្តាថ្ងៃស្អែកចូលយកវត្តមានម្តងទៀត ❤️❤️'
+              desc: 'លោកអ្នកបានទទួល ១ពិន្ទុសម្រាប់មេគុណពិន្ទុបទពិសោធន៍! សូមមេត្តាថ្ងៃស្អែកចូលយកវត្តមានម្តងទៀត ❤️❤️'
             })
             this.days += 1
             this.SighinStatus = true

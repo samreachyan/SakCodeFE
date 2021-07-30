@@ -2,54 +2,54 @@ export const JUDGE_STATUS = {
   '-2': {
     name: 'Compile Error',
     short: 'CE',
-    color: 'yellow',
+    color: '#ff9f43',
     type: 'warning'
   },
   '-1': {
     name: 'Wrong Answer',
     short: 'WA',
-    color: 'red',
+    color: '#ee5253',
     type: 'error'
   },
   '0': {
     name: 'Accepted',
     short: 'AC',
-    color: 'green',
+    color: '#1dd1a1',
     type: 'success'
   },
   '1': {
     name: 'Time Limit Exceeded',
     short: 'TLE',
-    color: 'red',
+    color: '#ee5253',
     type: 'error'
   },
   '2': {
     name: 'Time Limit Exceeded',
     short: 'TLE',
-    color: 'red',
+    color: '#ee5253',
     type: 'error'
   },
   '3': {
     name: 'Memory Limit Exceeded',
     short: 'MLE',
-    color: 'red',
+    color: '#ee5253',
     type: 'error'
   },
   '4': {
     name: 'Runtime Error',
     short: 'RE',
-    color: 'red',
+    color: '#ee5253',
     type: 'error'
   },
   '5': {
     name: 'System Error',
     short: 'SE',
-    color: 'red',
+    color: '#ee5253',
     type: 'error'
   },
   '6': {
     name: 'Pending',
-    color: 'yellow',
+    color: '#ff9f43',
     type: 'warning'
   },
   '7': {
@@ -60,12 +60,12 @@ export const JUDGE_STATUS = {
   '8': {
     name: 'Partial Accepted',
     short: 'PAC',
-    color: 'blue',
+    color: '#6c5ce7',
     type: 'primary'
   },
   '9': {
     name: 'Submitting',
-    color: 'yellow',
+    color: '#ff9f43',
     type: 'warning'
   }
 }

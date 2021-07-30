@@ -100,7 +100,7 @@ export const m = {
   Hint: 'ពន្យល់បន្ថែម',
   Source: 'ប្រភព',
   Edit_Problem: 'Edit Problme',
-  Add_Problme: 'Add Problem',
+  Add_Problem: 'Add Problem',
   High: 'ពិបាក',
   Mid: 'មធ្យម',
   Low: 'ងាយ',

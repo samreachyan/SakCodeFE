@@ -2,7 +2,7 @@
   <Row type="flex">
     <Col :span="24">
     <Panel id="contest-card" shadow>
-      <div slot="title">បញ្ជី{{$t('m.Contests')}} {{query.rule_type === '' ? this.$i18n.t('m.All') : query.rule_type}}</div>
+      <div slot="title">{{$t('m.Contests')}} {{query.rule_type === '' ? this.$i18n.t('m.All') : query.rule_type}}</div>
       <div slot="extra">
         <ul class="filter">
           <li>

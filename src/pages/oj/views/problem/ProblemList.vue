@@ -114,23 +114,25 @@
           },
           {
             title: this.$i18n.t('m.Title'),
-            width: 360,
+            width: 400,
             render: (h, params) => {
-              return h('Button', {
+              return h('a', {
                 props: {
                   type: 'text',
                   size: 'large'
                 },
-                on: {
-                  click: () => {
-                    this.$router.push({name: 'problem-details', params: {problemID: params.row._id}})
-                  }
+                attrs: {
+                  href: '/problem/' + params.row._id
                 },
                 style: {
                   padding: '2px 0',
-                  overflowX: 'auto',
+                  overflow: 'hidden',
+                  whiteSpace: 'nowrap',
+                  textOverflow: 'ellipsis',
                   textAlign: 'left',
-                  width: '100%'
+                  width: '95%',
+                  fontSize: '14px',
+                  color: '#495060'
                 }
               }, params.row.title)
             }

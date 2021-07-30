@@ -9,7 +9,7 @@
       <div class="footer">
         <!-- <p v-html="website.website_footer"></p> -->
         <p>Modified with ❤️ by <a href="https://github.com/samreachyan">Yan Samreach</a></p>
-        <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="https://sakcode.net">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a></p>
+        <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="/">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a></p>
       </div>
     </div>
 	<BackTop></BackTop>
