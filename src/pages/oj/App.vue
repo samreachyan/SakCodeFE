@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-	<vue-canvas-nest :config="{color:'255,0,0', count: 50, opacity: 0.7, pointColor: '26,110,200', zIndex: -2}" :el="'.content-app'"></vue-canvas-nest>
-    <div class="content-app theme1">
-      <transition name="fadeInUp" mode="out-in">
-        <router-view></router-view>
-      </transition>
-      <div class="footer">
-        <!-- <p v-html="website.website_footer"></p> -->
-        <p>Modified with ❤️ by <a href="https://github.com/samreachyan">Yan Samreach</a></p>
-        <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="/">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a></p>
+    <vue-canvas-nest :config="{color:'255,0,0', count: 50, opacity: 0.7, pointColor: '26,110,200', zIndex: -2}" :el="'.content-app'"></vue-canvas-nest>
+      <div class="content-app theme1">
+        <transition name="fadeInUp" mode="out-in">
+          <router-view></router-view>
+        </transition>
+        <div class="footer">
+          <!-- <p v-html="website.website_footer"></p> -->
+          <p>Modified with ❤️ by <a href="https://github.com/samreachyan">Yan Samreach</a></p>
+          <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="/">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://opensource.qduoj.com/">OnlineJudge</a></p>
+        </div>
       </div>
-    </div>
-	<BackTop></BackTop>
+    <BackTop></BackTop>
   </div>
 </template>
 

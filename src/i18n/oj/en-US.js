@@ -2,6 +2,7 @@ export const m = {
   // 404.vue
   Go_Home: 'Go Home',
   // Problem.vue
+  Comment: 'Comment',
   Description: 'Description',
   Input: 'Input',
   Output: 'Output',

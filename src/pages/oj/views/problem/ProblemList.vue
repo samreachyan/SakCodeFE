@@ -94,7 +94,7 @@
             title: 'ID',
             key: '_id',
             align: 'center',
-            width: 98,
+            width: 150,
             render: (h, params) => {
               return h('Button', {
                 props: {

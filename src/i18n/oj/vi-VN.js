@@ -2,6 +2,7 @@ export const m = {
   // 404.vue
   Go_Home: 'ទៅ ទំព័រដើម',
   // Problem.vue
+  Comment: 'បញ្ចេញមតិយោបល់',
   Description: 'ប្រធាន',
   Input: 'តម្លៃបញ្ចូល',
   Output: 'តម្លៃបង្ហាញ',

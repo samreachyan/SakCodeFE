@@ -1,9 +1,16 @@
+<style>
+  /* style for utterances inside template  */
+  .utterances {
+      max-width: 100%;
+      width: 100%;
+  }
+</style>
 <template>
   <div class="flex-container">
     <div id="problem-main">
       <!--problem main-->
       <Panel :padding="40" shadow>
-        <div style="text-align:center; color:#3091f2;" slot="title">{{problem.title}}</div>
+        <div style="text-align:center; color:#3091f2;" slot="title"><b><u>{{problem.title}}</u></b></div>
         <div id="problem-content" class="markdown-body" v-katex>
           <p class="title">{{$t('m.Description')}}</p>
           <p class="content" v-html=problem.description></p>
@@ -99,6 +106,18 @@
           </Col>
         </Row>
       </Card>
+      <!-- uttrances bot comment  -->
+      <Card :padding="20" dis-hover>
+          <h3 style="font-size: 20px;">{{$t('m.Comment')}}</h3>
+          <ul style="margin-left: 30px;margin-top: 20px;">
+            <li><span style="font-weight: 600;">អ្នកគួរតែ</span> ✅ ពិភាក្សារកដំណោះស្រាយ <span style="font-weight: 600;">មិនគួរ</span> ❎ ចែករំលែកកូដផ្ទាល់ 😫😫</li>
+            <li>🔥កូដដែលបានខមិន មិនដាក់ប៊ូតុងចុចនឹងត្រូវបានលុប🔥</li>
+            <li>ចូលរួមផ្តល់មតិ និងពិភាក្សាបន្ថែមលើ <a target="_blank" href="https://facebook.com/groups/sakcode">👉 Facebook Groups 👈</a></li>
+            <li><a rel="nofollow noopener noreferrer" target="_blank" class="animation-text" href="https://gist.github.com/samreachyan/8fbc7abea4e8b0c7ac10075d594b27e4">មើលការណែនាំ 💻💕 ការបញ្ចេញ៼មតិជាមួយ Github</a></li>
+          </ul>
+          <script type="application/javascript" src="https://utteranc.es/client.js" repo="samreachyan/sakcode-comment" issue-term="pathname" theme="boxy-light" crossorigin="anonymous" async> </script>
+      </Card>
+
     </div>
 
     <div id="right-column">
@@ -186,36 +205,7 @@
           <ECharts :options="pie"></ECharts>
         </div>
       </Card>
-
-      <!-- Display newest Problems -->
-      <!-- <Card id="newest-problems" v-if="!this.contestID || OIContestRealTimePermission">
-        <div slot="title">
-          <Icon type="ios-analytics"></Icon>
-          <span class="card-title">{{$t('m.Newest_Problems')}}</span>
-        </div>
-        <div class="newest-problems">
-          <div class="newest-problems-title">
-            <Icon type="ios-analytics"></Icon>
-            <span class="newest-problems-title-text">{{$t('m.Newest_Problems')}}</span>
-          </div>
-          <div class="newest-problems-content">
-            <template v-for="problem in problems">
-              <div class="newest-problems-problem">
-                <div class="newest-problems-problem-title">
-                  <a :href="'/problem/'+p._id" :key="p.id">
-                    <Icon type="ios-pricetag-outline"></Icon>
-                    <span>{{problem.title}}</span>
-                  </a>
-                </div>
-                <div class="newest-problems-problem-info">
-                  <span>{{problem.time_limit}}MS</span>
-                  <span>{{problem.memory_limit}}MB</span>
-                </div>
-              </div>
-            </template>
-          </div>
-        </div>
-      </Card> -->
+      <!-- newest Problems -->
       <Card style="margin-top: 20px;" :padding="0" v-if="!this.contestID || OIContestRealTimePermission">
         <div slot="title" style="font-size: 16px"><i data-v-20c86fbe="" class="ivu-icon ivu-icon-android-document"></i>
         <span class="card-title">{{ $t('m.Newest_Problems') }}</span>
@@ -281,6 +271,13 @@
         },
         problemList: [],
         problemLimit: 10,
+        query: {
+          keyword: '',
+          difficulty: '',
+          tag: '',
+          page: 1,
+          orderby: 'create_time'
+        },
         problem: {
           title: '',
           description: '',
@@ -355,9 +352,12 @@
       // get newest problems
       getProblemList () {
         let offset = 0
+        console.log('Calling api')
         api.getProblemList(offset, this.problemLimit, this.query).then(res => {
-          this.getNewestProblems = res.data.data.results
+          this.problemList = res.data.data.results
+          console.log('Calling done api')
         })
+        console.log('Calling api 2')
       },
       changePie (problemData) {
         // 只显示特定的一些状态
@@ -656,6 +656,30 @@
     float: right;
   }
 
+  .animation-text {
+    animation: comment 2s infinite;
+  }
+  @keyframes comment {
+    0% { color: greenyellow; }
+    50% { color: blue;}
+    100% { color: red; }
+  }
+
+
+.report {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  color: #495060;
+}
+.report a {
+  color: #495060;
+}
+.report a:hover {
+  color: red;
+}
+
   #pieChart {
     .echarts {
       height: 250px;
@@ -672,6 +696,12 @@
     margin-top: 20px;
     width: 500px;
     height: 480px;
+  }
+  .link-style {
+    color:#656a6d;
+  }
+  .link-style:hover {
+    color: blue;
   }
 </style>
 
