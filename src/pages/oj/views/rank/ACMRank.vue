@@ -19,7 +19,7 @@
   import api from '@oj/api'
   import Pagination from '@oj/components/Pagination'
   import utils from '@/utils/utils'
-  import { RULE_TYPE, USER_GRADE } from '@/utils/constants'
+  import { RULE_TYPE } from '@/utils/constants'
 
   export default {
     name: 'acm-rank',
@@ -47,11 +47,6 @@
             render: (h, params) => {
               if (params.row.title) {
                 return h('div', [
-                  h('Tag', {
-                    props: {
-                      color: params.row.title_color
-                    }
-                  }, params.row.title),
                   h('a', {
                     style: {
                       'display': 'inline-block',
@@ -70,11 +65,6 @@
                 ])
               } else {
                 return h('div', [
-                  h('Tag', {
-                    props: {
-                      color: USER_GRADE[params.row.grade].color
-                    }
-                  }, USER_GRADE[params.row.grade].name),
                   h('a', {
                     style: {
                       'display': 'inline-block',

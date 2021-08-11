@@ -32,6 +32,7 @@ export const m = {
   Code_can_not_be_empty: 'មិនមានកូដ មិនអាចវិនិច្ឆ័យបានទេ',
   Submit_code_successfully: 'ស្នើពិនិត្យកូដជោគជ័យ',
   You_have_solved_the_problem: 'អ្នកបានធ្វើលំហាត់នេះរូចរាល់',
+  List_Tried_Problems: 'លំហាត់មិនទាន់ធ្វើរួចរាល់',
   Submitted_successfully: 'Submitted successfully',
   You_have_submitted_a_solution: 'You have submitted a solution.',
   Contest_has_ended: 'ការប្រកួតប្រជែងត្រូវបានបញ្ចប់',

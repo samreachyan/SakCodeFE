@@ -7,11 +7,11 @@ export const m = {
   System_Config: 'System Config',
   Judge_Server: 'Judge Server',
   Prune_Test_Case: 'Prune Test Case',
-  Problem: 'លំហាត់',
+  Problem: 'Problems',
   FromFile: 'From File',
   ToFile: 'To File',
   ShareSubmission: 'Share Submission',
-  Problem_List: 'បញ្ជីលំហាត់',
+  Problem_List: 'Problems List',
   Create_Problem: 'Create Problem',
   Export_Import_Problem: 'Export Or Import Problem',
   Contest: 'Contest',
@@ -19,13 +19,13 @@ export const m = {
   Create_Contest: 'Create Contest',
   AboutUs: 'អំពីពួកយើង',
   // User.vue
-  User_User: 'គណនី',
+  User_User: 'User Account',
   Import_User: 'Import User',
   Generate_User: 'Generate User',
   // User.vue-dialog
   User_Info: 'User',
   User_Username: 'Username',
-  User_Real_Name: 'ឈ្មោះពេញ',
+  User_Real_Name: 'Full Name',
   User_Email: 'Email',
   User_New_Password: 'New Password',
   User_Type: 'User Type',
@@ -70,7 +70,7 @@ export const m = {
   // PruneTestCase
   Test_Case_Prune_Test_Case: 'Prune Test Case',
   // Problem.vue
-  Display_ID: 'Display ID',
+  Display_ID: 'Problem ID',
   Title: 'ចំណងជើង',
   Description: 'ប្រធាន',
   Input_Description: 'Input Description',

@@ -59,17 +59,21 @@
               <Button type="ghost" @click="goProblem(problemID)">{{problemID}}</Button>
             </div>
           </div>
-        </div>
-        <div id="icons">
-          <a :href="profile.github">
-            <Icon class="icon" type="logo-github" size="30"></Icon>
-          </a>
-          <a :href="'mailto:'+ profile.user.email">
-            <Icon class="icon" type="ios-mail-open-outline" size="30" />
-          </a>
-          <a :href="profile.blog">
-            <Icon class="icon" type="ios-ionic-outline" size="30" />
-          </a>
+
+          <div v-if="tried_problems.length" style="margin-top: 30px;">{{$t('m.List_Tried_Problems')}} ({{this.tried_problems.length}})
+            <Poptip v-if="refreshVisible" trigger="hover" placement="right-start">
+              <Icon type="ios-help-outline"></Icon>
+              <div slot="content">
+                <p>If you find the following problem id does not exist,<br> try to click the button.</p>
+                <Button type="info" @click="freshProblemDisplayID">regenerate</Button>
+              </div>
+            </Poptip>
+          </div>
+          <div class="btns">
+            <div class="problem-btn" v-for="problemID of tried_problems" :key="problemID">
+            <Button @click="goProblem(problemID)">{{problemID}}</Button>
+            </div>
+          </div>
         </div>
       </div>
     </Card>
@@ -87,6 +91,7 @@
         username: '',
         profile: {},
         problems: [],
+        tried_problems: [],
         color: '',
         gradename: ''
       }
@@ -113,15 +118,20 @@
         let OIProblems = this.profile.oi_problems_status.problems || {}
         // todo oi problems
         let ACProblems = []
+        let TriedProblems = []
         for (let problems of [ACMProblems, OIProblems]) {
           Object.keys(problems).forEach(problemID => {
             if (problems[problemID]['status'] === 0) {
               ACProblems.push(problems[problemID]['_id'])
+            } else if (problems[problemID]['status'] !== 0) {
+              TriedProblems.push(problems[problemID]['_id'])
             }
           })
         }
         ACProblems.sort()
+        TriedProblems.sort()
         this.problems = ACProblems
+        this.tried_problems = TriedProblems
       },
       goProblem (problemID) {
         this.$router.push({name: 'problem-details', params: {problemID: problemID}})
@@ -154,7 +164,7 @@
   .container {
     position: relative;
     width: 75%;
-    margin: 170px auto;
+    margin: 170px auto 50px auto;
     text-align: center;
     p {
       margin-top: 8px;

@@ -285,7 +285,7 @@
       },
       pickone () {
         api.pickone().then(res => {
-          this.$success('Good Luck')
+          this.$success('លំហាត់បានជ្រើសរើស សំណាងល្អ!')
           this.$router.push({name: 'problem-details', params: {problemID: res.data.data}})
         })
       }
