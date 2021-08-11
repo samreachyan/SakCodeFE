@@ -10,7 +10,7 @@
 - Easy use simditor & Nice codemirror editor
 - Amazing charting and visualization(echarts)
 - User-friendly operation
-- Quite beautiful：)
+- Quite beautiful
 
 ## Get Started
 
@@ -23,33 +23,21 @@ npm install
 NODE_ENV=development npm run build:dll
 
 # the dev-server will set proxy table to your backend
-export TARGET=http://Your-backend
+export TARGET=https://sakcode.net
 
 # serve with hot reload at localhost:8080
 npm run dev
 ```
 
-## Screenshots
-
-[Check here.](https://github.com/QingdaoU/OnlineJudge)
-
-## Browser Support
-
-Modern browsers and Internet Explorer 10+.
-
-## LICENSE
-
-[MIT](http://opensource.org/licenses/MIT)
-
 ## Attention
 
 ```
-#custom JavaScript or CSS   自定义JavaScript/CSS
+# custom JavaScript or CSS
 ./src/styles
 
-#page    修改界面
+#​ page
 ./src/pages
 
-#language    语言文件
+# languages
 ./src/i18n
 ```
