@@ -127,7 +127,7 @@ export const m = {
   Force_HTTPS: 'Force HTTPS',
   CDN_HOST: 'CDN HOST',
   // Login.vue
-  Welcome_to_Login: 'Welcome to Login',
+  Welcome_to_Login: 'សូមស្វាគមន៍មកកាន់សាកកូដ',
   GO: 'GO',
   username: 'username',
   password: 'password',

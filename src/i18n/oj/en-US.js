@@ -1,7 +1,13 @@
 export const m = {
   // 404.vue
   Go_Home: 'Go Home',
+  SakCode: 'Sak Code',
+  Footer_first: 'is a free online code challenge Khmer language',
+  Footer_second: 'for high school students and university students learn to challenge and solve math problems in code.',
+  copy_right: 'Copyright',
   // Problem.vue
+  No_problems: 'No Problems Data',
+  No_Data: 'No Data',
   Comment: 'Comment',
   Description: 'Description',
   Input: 'Input',

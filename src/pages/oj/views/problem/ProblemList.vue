@@ -39,7 +39,10 @@
           </li>
         </ul>
       </div>
-      <Table style="width: 100%; font-size: 16px;"
+      <div class="no-problems" v-if="!problemList.length" key="no-problem">
+          <p>{{$t('m.No_problems')}}</p>
+      </div>
+      <Table v-else style="width: 100%; font-size: 16px;"
              :columns="problemTableColumns"
              @on-sort-change="handleSortChange"
              :data="problemList"
@@ -322,4 +325,11 @@
   #pick-one {
     margin-bottom: 10px;
   }
+
+  .no-problems {
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+  }
+
 </style>

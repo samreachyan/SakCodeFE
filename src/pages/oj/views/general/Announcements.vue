@@ -1,7 +1,6 @@
 <template>
   <div>
     <Panel v-if="!isContest" shadow style="float:right; margin-right:0%; width:23%; hight:200px">
-      <div style="margin:0 0; font-size:17px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">ចេះពីរៀន មានពីរក</div>
       <div style="margin-top: 10px; font-size:17px; text-align:center; width:100%; line-height:16px; background: transparent; text color:#636e72;">ថ្ងៃ {{ nowWeek }}</div>
       <Layout>
         <Content style="background: transparent;">
@@ -240,7 +239,7 @@
   .no-announcement {
     text-align: center;
     font-size: 16px;
-  }changeLocale
+  }
 
   .announcement-animate-enter-active {
     color: rgba(255, 255, 255, 0.5);

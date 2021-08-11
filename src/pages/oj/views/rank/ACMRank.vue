@@ -7,7 +7,10 @@
         <ECharts :options="options" ref="chart" auto-resize></ECharts>
       </div>
     </Panel>
-    <Table :data="dataRank" :columns="columns" :loading="loadingTable" size="large"></Table>
+    <div class="no-data" v-if="!dataRank.length">
+      <p>{{$t('m.No_Data')}}</p>
+    </div>
+    <Table v-else :data="dataRank" :columns="columns" :loading="loadingTable" size="large"></Table>
     <Pagination :total="total" :page-size.sync="limit" :current.sync="page"
                 @on-change="getRankData" show-sizer
                 @on-page-size-change="getRankData(1)"></Pagination>
@@ -215,5 +218,10 @@
     margin: 0 auto;
     width: 95%;
     height: 400px;
+  }
+  .no-data {
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
   }
 </style>

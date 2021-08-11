@@ -8,8 +8,11 @@
         </transition>
         <div class="footer">
           <!-- <p v-html="website.website_footer"></p> -->
-          <p>Modified with ❤️ by <a href="https://github.com/samreachyan">Yan Samreach</a></p>
-          <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="/">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://opensource.qduoj.com/">OnlineJudge</a></p>
+          <!-- <p>Modified with ❤️ by <a href="https://github.com/samreachyan">Yan Samreach</a></p> -->
+          <p><a href="/IDE">{{$t('m.IDE')}}</a> - <a href="/FAQ">{{$t('m.FAQ')}}</a> - <a href="/about">{{$t('m.Judger')}}</a> - <a href="/AboutUS">{{$t('m.AboutUs')}}</a></p>
+          <p><b>{{ $t('m.SakCode') }}</b> {{$t('m.Footer_first')}}</p>
+          <p>{{$t('m.Footer_second')}}</p>
+          <p>Copyright &copy; {{ new Date().getFullYear() }} <a href="/">សាកកូដ​ - Sak Code.</a>&nbsp; Powered by <a href="https://github.com/samreachyan/OnlineJudge">OnlineJudge</a></p>
         </div>
       </div>
     <BackTop></BackTop>
