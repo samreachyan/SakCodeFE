@@ -4,6 +4,7 @@ import VueI18n from 'vue-i18n'
 // មិនមាន view design ​library ជាភាសាខ្មែរ
 import ivenUS from 'view-design/dist/locale/en-US'
 // import ivenKH from 'view-design/dist/locale/km-KH'
+import ivenCN from 'view-design/dist/locale/zh-CN'
 
 // element UI
 import elenUS from 'element-ui/lib/locale/lang/en'
@@ -14,7 +15,7 @@ Vue.use(VueI18n)
 const languages = [
   {value: 'en-US', label: 'English', iv: ivenUS, el: elenUS},
   // {value: 'km-KH', label: 'ភាសាខ្មែរ', iv: ivenKH, el: elenKM}
-  {value: 'vi-VN', label: 'ភាសាខ្មែរ', iv: elenKM, el: elenKM}
+  {value: 'vi-VN', label: 'ភាសាខ្មែរ', iv: ivenCN, el: elenKM}
 ]
 const messages = {}
 

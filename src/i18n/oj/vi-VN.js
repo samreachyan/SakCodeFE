@@ -1,6 +1,7 @@
 export const m = {
   // 404.vue
   Go_Home: 'ទៅ ទំព័រដើម',
+  Welcome_to: 'សូមស្វាគមន៍មកកាន់ ',
   // Problem.vue
   Comment: 'បញ្ចេញមតិយោបល់',
   Description: 'ប្រធាន',

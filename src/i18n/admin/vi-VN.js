@@ -11,7 +11,7 @@ export const m = {
   FromFile: 'From File',
   ToFile: 'To File',
   ShareSubmission: 'Share Submission',
-  Problem_List: 'Problems List',
+  Problem_List: 'បញ្ជីលំហាត់',
   Create_Problem: 'Create Problem',
   Export_Import_Problem: 'Export Or Import Problem',
   Contest: 'Contest',

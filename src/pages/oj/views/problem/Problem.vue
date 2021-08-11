@@ -110,10 +110,8 @@
       <Card :padding="20" dis-hover>
           <h3 style="font-size: 20px;">{{$t('m.Comment')}}</h3>
           <ul style="margin-left: 30px;margin-top: 20px;">
-            <li><span style="font-weight: 600;">អ្នកគួរតែ</span> ✅ ពិភាក្សារកដំណោះស្រាយ <span style="font-weight: 600;">មិនគួរ</span> ❎ ចែករំលែកកូដផ្ទាល់ 😫😫</li>
-            <li>🔥កូដដែលបានខមិន មិនដាក់ប៊ូតុងចុចនឹងត្រូវបានលុប🔥</li>
+            <li><a rel="nofollow noopener noreferrer" target="_blank" class="animation-text" href="https://gist.github.com/samreachyan/8fbc7abea4e8b0c7ac10075d594b27e4">មើលការណែនាំ 🔥 ការបញ្ចេញមតិជាមួយ Github 🔥</a></li>
             <li>ចូលរួមផ្តល់មតិ និងពិភាក្សាបន្ថែមលើ <a target="_blank" href="https://facebook.com/groups/sakcode">👉 Facebook Groups 👈</a></li>
-            <li><a rel="nofollow noopener noreferrer" target="_blank" class="animation-text" href="https://gist.github.com/samreachyan/8fbc7abea4e8b0c7ac10075d594b27e4">មើលការណែនាំ 💻💕 ការបញ្ចេញ៼មតិជាមួយ Github</a></li>
           </ul>
           <script type="application/javascript" src="https://utteranc.es/client.js" repo="samreachyan/sakcode-comment" issue-term="pathname" theme="boxy-light" crossorigin="anonymous" async> </script>
       </Card>
@@ -206,7 +204,7 @@
         </div>
       </Card>
       <!-- newest Problems -->
-      <Card style="margin-top: 20px;" :padding="0" v-if="!this.contestID || OIContestRealTimePermission">
+      <!-- <Card style="margin-top: 20px;" :padding="0" v-if="!this.contestID || OIContestRealTimePermission">
         <div slot="title" style="font-size: 16px"><i data-v-20c86fbe="" class="ivu-icon ivu-icon-android-document"></i>
         <span class="card-title">{{ $t('m.Newest_Problems') }}</span>
         </div>
@@ -215,7 +213,7 @@
             <a class="link-style" :href="'/problem/' + p._id">{{p._id}} - {{p.title}}</a>
           </li>
         </ul>
-      </Card>
+      </Card> -->
       <!-- end display newest Problems -->
 
     </div>
@@ -276,7 +274,7 @@
           difficulty: '',
           tag: '',
           page: 1,
-          orderby: 'create_time'
+          orderby: '-create_time'
         },
         problem: {
           title: '',
@@ -352,12 +350,9 @@
       // get newest problems
       getProblemList () {
         let offset = 0
-        console.log('Calling api')
         api.getProblemList(offset, this.problemLimit, this.query).then(res => {
           this.problemList = res.data.data.results
-          console.log('Calling done api')
         })
-        console.log('Calling api 2')
       },
       changePie (problemData) {
         // 只显示特定的一些状态
